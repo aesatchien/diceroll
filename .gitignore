@@ -1,0 +1,35 @@
+# CJH gitignore 
+
+# folders for extra stuff
+logs/
+report/
+scratch/
+
+# Jupyter stuff
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+#pycharm directory
+.idea/
+
+#pycache stuff
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg

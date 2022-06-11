@@ -399,18 +399,18 @@ def make_histogram(pdist_list, title='Probablilty Test', description=None):
         annotation_offset = 0
         line_count = 0
         if description:
-            plt.annotate(s=description, xy=(.85 - .005 * (len(description.splitlines()[0])), text_top),
+            plt.annotate(text=description, xy=(.85 - .005 * (len(description.splitlines()[0])), text_top),
                          xycoords='axes fraction', fontsize=11)
             annotation_offset = 2 * text_line_height
 
         if min(df['damage']) < 1:
-            plt.annotate(s=f"Miss Chance: {df['probability'][0]:4.2f}", xy=(.79, text_top - annotation_offset),
+            plt.annotate(text=f"Miss Chance: {df['probability'][0]:4.2f}", xy=(.79, text_top - annotation_offset),
                          xycoords='axes fraction', fontsize=11, color = font_color)
             line_count+=1
-        plt.annotate(s=f'Mean: {mean:4.2f}', xy=(.84, text_top - line_count*text_line_height - annotation_offset),
+        plt.annotate(text=f'Mean: {mean:4.2f}', xy=(.84, text_top - line_count*text_line_height - annotation_offset),
                      xycoords='axes fraction', fontsize=11, color = font_color)
         line_count += 1
-        plt.annotate(s=f'Stdev: {stdev:4.2f}', xy=(.84, text_top - line_count*text_line_height - annotation_offset),
+        plt.annotate(text=f'Stdev: {stdev:4.2f}', xy=(.84, text_top - line_count*text_line_height - annotation_offset),
                      xycoords='axes fraction', fontsize=11, color = font_color)
 
     plt.title(title, fontsize=12)
